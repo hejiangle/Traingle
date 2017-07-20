@@ -8,20 +8,25 @@ public class DemoShower {
 //        drawHorizontalLine(8);
 //        drawVerticalLine(3);
 //        drawRightTraingle(3);
-        drawIsoscelesTraingle(4);
+        drawIsoscelesTraingle(3);
     }
 
     private static void drawIsoscelesTraingle(int n) {
-        for(int h = 0; h < n; h++){
+        for(int h = 0; h < n-1; h++) {
             blank(n - h - 1);
             drawHorizontalLine(2 * (h + 1) - 1);
             toNextLine();
         }
+        priintName("Oliver");
         for(int h = n - 2; h >= 0; h-- ){
             blank(n - h - 1);
             drawHorizontalLine(2 * (h + 1) - 1);
             toNextLine();
         }
+    }
+
+    private static void priintName(String name) {
+        System.out.println(name);
     }
 
     private static void blank(int i) {
